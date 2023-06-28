@@ -3,9 +3,15 @@ import { useAuth } from "../contexts/AuthContext";
 import { Navigate, Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import CustomButton from "../components/CustomButton";
+import { Canvas } from "@react-three/fiber";
+
 
 export default function Profile() {
   const { user } = useAuth();
+
+  const repeatX =1;
+  const repeatY = 1;
+
   return (
     <>
       <div className="text-6xl font-bold text-slate-600">User Profile</div>
@@ -30,14 +36,15 @@ export default function Profile() {
           >
            <CustomButton 
                 type="filled"
-                title="Customize"
-                handleClick={() => state.intro = false}
+                title="Try now"
                 customStyles="w-fit px-4 py-2.5 font-bold text-sm"
               />
           </NavLink>
 		  </p>
        
       </div>
+     
+
     </>
   );
 }

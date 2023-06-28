@@ -47,10 +47,9 @@ export default function Login() {
 						<h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
 							Sign in 
 						</h1>
-						{(error !== null) ?`
-							${error}
-							` : ""
-						}
+						{error && (
+                  <p className="text-sm text-red-600">{error}</p>
+                )}
 						
 
 						<form
