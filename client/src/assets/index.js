@@ -1,8 +1,8 @@
-import fileIcon from "./file.png";
-import swatch from "./swatch.png";
-import download from "./download.png";
+import fileIcon from "./filePicker.svg";
+import swatch from "./colorPicker.svg";
 
-import logoShirt from "./logo-tshirt.png";
-import stylishShirt from "./stylish-tshirt.png";
 
-export { fileIcon, swatch, download, logoShirt, stylishShirt };
+import logoShirt from "./logoTexture.svg";
+import stylishShirt from "./fullTexture.svg";
+
+export { fileIcon, swatch, logoShirt, stylishShirt };

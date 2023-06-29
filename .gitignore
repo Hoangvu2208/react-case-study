@@ -1,2 +1,5 @@
-.DS_Storenode_moduleslaradock.env-*
+.DS_Store
+node_modules
+laradock
+.env-*
 

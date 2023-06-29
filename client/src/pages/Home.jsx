@@ -21,7 +21,7 @@ const Home = () => {
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.div {...slideAnimation("down")}>
             <p className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-black to-yellow-400">
-              Hello <br />
+             <span className="text-sm"> Hello</span> <br />
               {user.name}
             </p>
           </motion.div>

@@ -14,7 +14,8 @@ const CanvasModel = () => {
     
     >
       <ambientLight intensity={0.5}/>
-      <Environment preset="city" />
+      {/* Preset must be one of: apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse */}
+      <Environment preset="studio" background blur={0.01} />
 
       <CameraRig>
         <Center>
