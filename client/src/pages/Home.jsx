@@ -28,7 +28,7 @@ const Home = () => {
 
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h2 className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              <h2 className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-black to-pink-600">
                 Make <br />
                 Your T shirt
               </h2>

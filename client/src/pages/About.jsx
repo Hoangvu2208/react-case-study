@@ -1,32 +1,45 @@
-import React from 'react';
+import { Canvas } from "@react-three/fiber";
+import { Environment, Center } from "@react-three/drei";
+import Model from "../canvas/Model";
+import "./about.css";
+import { CustomButton } from "../components";
+import { NavLink } from "react-router-dom";
+import { useSnapshot } from 'valtio';
 
-export default function About() {
-	return (
-		<>
-			<div className="text-6xl font-bold text-slate-600">About Us</div>
-			<hr className="bg-slate-400 h-1 w-full my-4" />
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-				soluta veniam sequi modi nihil eius explicabo quasi totam quidem
-				voluptatibus ex, obcaecati architecto perspiciatis dolorem magni rem vel
-				cupiditate repudiandae?
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque
-				distinctio sunt deleniti voluptatum nostrum expedita voluptatibus
-				aliquid mollitia, nam vero! Sed suscipit saepe quo cupiditate!
-				Voluptatibus illum amet nulla? Eveniet reiciendis voluptas provident
-				aliquid, voluptatum, tempora reprehenderit neque, ad ipsa similique quae
-				dignissimos amet odio distinctio atque! Deserunt animi dicta quisquam
-				voluptates iste dolorum architecto, sapiente numquam ipsa! Odit.
-				Adipisci dignissimos tempora, praesentium excepturi, iste aliquid,
-				debitis rem id aperiam itaque asperiores soluta similique eligendi sint
-				ut necessitatibus architecto quos ab fugiat harum rerum magnam nulla
-				distinctio? Aut, nesciunt. Voluptates doloribus quibusdam voluptatem
-				vero in. Itaque dicta quae error nemo sapiente quos id, magnam numquam
-				maiores vero sed perferendis quia nihil impedit deleniti doloremque
-				repellat! Ullam rem libero ut?
-			</p>
-		</>
-	);
-}
+import { OrbitControls, Stats } from "@react-three/drei";
+import state from '../store';
+
+const About = () => {
+	const snap = useSnapshot(state);
+  return (
+    <>
+      <Canvas
+        shadows
+        camera={{ position: [0, 0, 2], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+        className="w-screen max-w-full h-screen transition-all ease-in absolute top-0 left-0"
+      >
+        <ambientLight intensity={0.5} />
+        {/* Preset must be one of: apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse */}
+        <Environment preset="studio" background />
+
+        <Model />
+
+        <OrbitControls />
+      </Canvas>
+	  <div className="absolute top-36 right-5">
+	  <NavLink to="/app">
+	  <CustomButton 
+              type="filled"
+              title="Go Back"
+              handleClick={() => state.intro = false}
+              customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+            />
+	  </NavLink>
+	  
+	  </div>
+    </>
+  );
+};
+
+export default About;

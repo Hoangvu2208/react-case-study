@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { Navigate, Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import CustomButton from "../components/CustomButton";
-import { Canvas } from "@react-three/fiber";
+
 
 
 export default function Profile() {
@@ -25,7 +25,7 @@ export default function Profile() {
           Created At: {user.created_at}
         </p>
         
-          <p>
+          <p  className="flex justify-center items-center p-2">
 		  <NavLink
             to="/app"
             className={({ isActive }) =>
@@ -39,7 +39,7 @@ export default function Profile() {
                 title="Try now"
                 customStyles="w-fit px-4 py-2.5 font-bold text-sm"
               />
-          </NavLink>
+          </NavLink>		
 		  </p>
        
       </div>

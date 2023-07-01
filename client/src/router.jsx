@@ -28,10 +28,7 @@ const router = createBrowserRouter([
 		path: '/',
 		element: <ProtectedLayout />,
 		children: [
-			{
-				path: '/about',
-				element: <About />,
-			},
+			
 			{
 				path: '/profile',
 				element: <Profile />,
@@ -40,11 +37,18 @@ const router = createBrowserRouter([
 				path: '/manage',
 				element: <Manage />,
 			},
+			{
+				path: '/about',
+				element: <About />,
+			},
 			
-			
+						
 		],
 		
+		
 	},
+	
+	
 	{
 		path: '/app',
 		element: <App />,

@@ -33,21 +33,21 @@ export default function Manage() {
         ""
       )}
       <div className="block p-10 bg-white border border-gray-200 shadow-xl rounded-lg shadowdark:border-gray-700">
-        <table className="table-auto border-collapse border border-slate-500 p-2 hover:table-fixed">
+        <table className="items-center bg-transparent w-full border-collapse ">
           <thead>
             <tr className="p-2">
-              <th className="border border-slate-600">Name</th>
-              <th className="border border-slate-600">Email</th>
-              <th className="border border-slate-600">Created At</th>
+              <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Name</th>
+              <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Email</th>
+              <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Created At</th>
             </tr>
           </thead>
           <tbody>
             {userList.map((users,i) => (
               <tr key={i}
                className="p-2">
-                <td className="border border-slate-700">{users.name}</td>
-                <td className="border border-slate-700">{users.email}</td>
-                <td className="border border-slate-700">{user.created_at}</td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">{users.name}</td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">{users.email}</td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">{user.created_at}</td>
               </tr>
             ))}
           </tbody>
